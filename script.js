@@ -36,7 +36,8 @@ const theWinner = document.querySelector('#winner');
 //creates a function to play a round and determine wich one is the winner
 function playRound() {
 
-    theWinner.textContent = ''
+    theWinner.textContent = 'O primeiro que fizer 5 pontos vence! Boa sorte!'
+    
     let computerSelection = computerPlay()
     
     if (playerSelection.toLowerCase() !== 'tesoura' && playerSelection.toLowerCase() !== 'pedra' && playerSelection.toLowerCase() !== 'papel') {
@@ -61,18 +62,14 @@ function playRound() {
     computerScoreText.textContent = `${computerScore}`;
 
     if (playerScore === 5) {
-        theWinner.textContent = `Você marcou ${playerScore} pontos! Você ganhou a partida!`;
+        theWinner.textContent = `Você ganhou a partida marcando ${playerScore} pontos! YEYY!`;
         // reset both player and computer score so the 5 round match can be running again
         playerScore = 0;
         computerScore = 0;
-        playerScoreText.textContent = `${playerScore}`;
-        computerScoreText.textContent = `${computerScore}`;
     } else if (computerScore === 5) {
-        theWinner.textContent = `O computador marcou ${computerScore} pontos! Você perdeu, mas não fique chateado: tente novamente!`;
+        theWinner.textContent = `O computador ganhou a partida marcando ${computerScore} pontos. Tente novamente!`;
         // reset both player and computer score so the 5 round match can be running again
         playerScore = 0;
         computerScore = 0;
-        playerScoreText.textContent = `${playerScore}`;
-        computerScoreText.textContent = `${computerScore}`;
     }
 };
