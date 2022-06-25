@@ -1,10 +1,27 @@
 <!DOCTYPE html>
+<html>
 <head lang="en">
     <meta charset="utf-8">
-    <title>Rock Paper Scissors</title>
-    <script src="./script.js"></script>
+    <title>Pedra, Papel e Tesoura</title>
+    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
+    <div id="score">
+        <div id="playerScore">0</div>
+        <div id="vsText">VS</div>
+        <div id="computerScore">0</div>
+    </div>
 
+    <div id="options">
+        <button class="btn" id="pedra">PEDRA</button>
+        <button class="btn" id="papel">PAPEL</button>
+        <button class="btn" id="tesoura">TESOURA</button>
+    </div>
+
+    
+    <p id="result"></p>
+    <h1 id="winner"></h1>
 </body>
+</html>
