@@ -66,10 +66,14 @@ function playRound() {
         // reset both player and computer score so the 5 round match can be running again
         playerScore = 0;
         computerScore = 0;
+        playerScoreText.textContent = `${playerScore}`;
+        computerScoreText.textContent = `${computerScore}`;
     } else if (computerScore === 5) {
         theWinner.textContent = `O computador ganhou a partida marcando ${computerScore} pontos. Tente novamente!`;
         // reset both player and computer score so the 5 round match can be running again
         playerScore = 0;
         computerScore = 0;
+        playerScoreText.textContent = `${playerScore}`;
+        computerScoreText.textContent = `${computerScore}`;
     }
 };
